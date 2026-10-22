@@ -37,6 +37,7 @@ dependencies:
   device_preview_plus: ^2.8.6
   get_it: ^9.3.0
   google_fonts: ^8.2.1
+  provider: ^6.1.2
 
 dev_dependencies:
   flutter_test:

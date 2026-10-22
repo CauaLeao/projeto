@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'package:provider/provider.dart';
+import '../../models/usuario.dart';
+import '../../providers/usuario_provider.dart';
+
 class LoginView extends StatefulWidget {
   const LoginView({super.key});
 
@@ -88,7 +92,15 @@ class _LoginViewState extends State<LoginView> {
                 style: ElevatedButton.styleFrom(
                   fixedSize: const Size(250, 60), // Largura: 200, Altura: 50
                 ),
-                onPressed: () {}, 
+                onPressed: () {
+                  context.read<UsuarioProvider>().definirUsuario(
+                    Usuario(
+                      nome: 'Leitor',
+                      email: 'leitor@bookollection.com',
+                    ),
+                  );
+                  Navigator.pushReplacementNamed(context, 'perfil');
+                }, 
                 child: 
                 Text(
                   'Entrar', 

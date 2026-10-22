@@ -1,3 +1,6 @@
+import 'package:provider/provider.dart';
+import 'providers/usuario_provider.dart';
+
 import 'package:device_preview_plus/device_preview_plus.dart';
 import 'package:flutter/material.dart';
 
@@ -8,7 +11,14 @@ import 'view/Bases/recuperar_senha_view.dart';
 import 'view/Bases/sobre_view.dart';
 
 void main() {
-  runApp(DevicePreview(builder: (context) => const MainApp()));
+  runApp(
+  DevicePreview(
+      builder: (context) => ChangeNotifierProvider(
+        create: (_) => UsuarioProvider(),
+        child: const MainApp(),
+      ),
+    ),
+  );
 }
 
 class MainApp extends StatelessWidget {
