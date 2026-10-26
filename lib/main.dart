@@ -1,3 +1,4 @@
+import 'package:projeto/view/Extras/inicio_view.dart';
 import 'package:provider/provider.dart';
 import 'providers/usuario_provider.dart';
 
@@ -40,6 +41,7 @@ class MainApp extends StatelessWidget {
         'perfil': (context) => const PerfilView(),
         'recuperar_senha': (context) => const RecuperarSenhaView(),
         'sobre': (context) => const SobreView(),
+        'inicio': (context) => const InicioView(),
       },
 
       onUnknownRoute: (settings) {

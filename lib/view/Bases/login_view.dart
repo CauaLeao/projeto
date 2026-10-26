@@ -104,7 +104,7 @@ class _LoginViewState extends State<LoginView> {
                       email: 'leitor@bookollection.com',
                     ),
                   );
-                  Navigator.pushReplacementNamed(context, 'perfil');
+                  Navigator.pushReplacementNamed(context, 'inicio');
                 }, 
                 child: 
                 Text(
