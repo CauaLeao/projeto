@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -6,6 +7,7 @@ import '../../models/usuario.dart';
 import '../../providers/usuario_provider.dart';
 
 class LoginView extends StatefulWidget {
+
   const LoginView({super.key});
 
   @override
@@ -62,7 +64,9 @@ class _LoginViewState extends State<LoginView> {
                   labelText: 'Senha: ',
                   border: OutlineInputBorder(),
                   suffixIcon: IconButton(
-                    onPressed: () {},
+                    onPressed: () {
+                  
+                    },
 
                     //padding: const EdgeInsets.only(right: 15.0), // Ajuste o valor aqui (ex: 12.0, 16.0)
                     icon: Icon(Icons.visibility_off),
@@ -134,7 +138,14 @@ class _LoginViewState extends State<LoginView> {
                   ),
                 )
               ),
-
+              SizedBox(height:20,),
+            
+              TextButton(
+                onPressed: (){
+                  Navigator.pushNamed(context, 'sobre');
+                },
+                child: const Text('Sobre'),
+              )
 
             ]
           ),
