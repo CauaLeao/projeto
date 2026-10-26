@@ -18,7 +18,7 @@ class _LoginViewState extends State<LoginView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 248, 225, 124),
+      backgroundColor: const Color.fromARGB(255, 250, 246, 232),
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.all(20),
@@ -38,16 +38,19 @@ class _LoginViewState extends State<LoginView> {
                 textAlign: TextAlign.center,
                 style: GoogleFonts.alfaSlabOne(
                   fontSize: 20,
-                  color:  const Color.fromARGB(255, 64, 40, 2),
+                  color:  const Color.fromARGB(255, 142, 96, 23),
                 ),
               ),
               SizedBox(height: 40,),
               
               //Textfield E-mail
-              TextField(
-                decoration: InputDecoration(
+              TextFormField(
+                keyboardType: TextInputType.emailAddress,
+                textInputAction: TextInputAction.done,
+                decoration: const InputDecoration(
                   labelText: 'E-mail: ',
                   border: OutlineInputBorder(),
+                  prefixIcon: Icon(Icons.email_outlined),
                 ),
               ),
               SizedBox(height: 20),
@@ -59,9 +62,7 @@ class _LoginViewState extends State<LoginView> {
                   labelText: 'Senha: ',
                   border: OutlineInputBorder(),
                   suffixIcon: IconButton(
-                    onPressed: () {
-
-                    },
+                    onPressed: () {},
 
                     //padding: const EdgeInsets.only(right: 15.0), // Ajuste o valor aqui (ex: 12.0, 16.0)
                     icon: Icon(Icons.visibility_off),

@@ -77,7 +77,7 @@ class _CadastroUsuarioViewState extends State<CadastroUsuarioView> {
     @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 248, 225, 124),
+      backgroundColor: const Color.fromARGB(255, 250, 246, 232),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(20),
@@ -91,16 +91,16 @@ class _CadastroUsuarioViewState extends State<CadastroUsuarioView> {
                     size: 90,
                     color: Color.fromARGB(255, 142, 96, 23),
                   ),
-                  const SizedBox(height: 25),
+                  const SizedBox(height: 15),
                   Text(
                     'BooKollection',
                       textAlign: TextAlign.center,
                     style: GoogleFonts.alfaSlabOne(
                       fontSize: 20,
-                      color: const Color.fromARGB(255, 64, 40, 2),
+                      color: const Color.fromARGB(255, 142, 96, 23),
                     ),
                   ),
-                  const SizedBox(height: 40),
+                  const SizedBox(height: 25),
                   TextFormField(
                     controller: _nomeController,
                     decoration: const InputDecoration(
@@ -201,6 +201,8 @@ class _CadastroUsuarioViewState extends State<CadastroUsuarioView> {
                       return null;
                     },
                   ),
+
+
                   const SizedBox(height: 30),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
@@ -215,6 +217,9 @@ class _CadastroUsuarioViewState extends State<CadastroUsuarioView> {
                       ),
                     ),
                   ),
+                  SizedBox(height: 20,),
+
+
                   TextButton(
                     onPressed: () => Navigator.pop(context),
                     child: const Text('Já tem conta? Entrar'),
