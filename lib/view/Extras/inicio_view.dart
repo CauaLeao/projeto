@@ -122,10 +122,13 @@ class _InicioViewState extends State<InicioView> {
                 color: Color.fromARGB(255, 142, 96, 23),
               ),
         actions: [
-          IconButton(
-            tooltip: 'Meu perfil',
+          Padding(
+            padding: const EdgeInsets.only(right: 16.0), // Afasta o ícone 16 pixels da borda direita
+            child: IconButton(
+              tooltip: 'Meu perfil',
             onPressed: () => Navigator.pushNamed(context, 'perfil'),
             icon: const Icon(Icons.account_circle_outlined),
+            ),
           ),
         ],
       ),
@@ -194,6 +197,12 @@ class _InicioViewState extends State<InicioView> {
                   ),
           ),
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.pushReplacementNamed(context, 'publicar');
+        },
+        child: const Icon(Icons.add), // Ícone interno do botão
       ),
     );
   }
@@ -296,11 +305,13 @@ class _CartaoPublicacao extends StatelessWidget {
                   icon: const Icon(Icons.mode_comment_outlined),
                   label: Text('${publicacao.comentarios}'),
                 ),
+
               ],
             ),
           ],
         ),
       ),
     );
+    
   }
 }
